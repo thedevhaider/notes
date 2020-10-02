@@ -5,9 +5,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const notes = require("./routes/api/notes");
-
-
+const cors = require('cors')
 const app = express();
+
+// Enabling Cors
+app.use(cors())
 
 //Adding middlerware to express app
 app.use(bodyParser.urlencoded({
